@@ -89,7 +89,7 @@ const RegisterPage = () => {
     return (
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Form Section */}
-            <div className="container text-Greyscale-900 py-8 lg:ml-6">
+            <div className="container py-8 lg:ml-6">
                 <div className="flex justify-end">
                     <Logo className={"w-32"} />
                 </div>
@@ -166,9 +166,9 @@ const RegisterPage = () => {
                         ثبت‌نام
                     </button>
                     )}
-                    <p className="text-Greyscale-700 text-Body-MD-Small">
+                    <p className="text-Greyscale-700 text-Regular-Normal-text-1">
                     قبلاً ثبت‌نام کرده‌اید؟{" "}
-                    <Link href="/login" className="text-Body-SM-Small text-primary-500">
+                    <Link href="/login" className="text-Regular-Normal-text-1 text-primary-500">
                         وارد شوید
                     </Link>
                     </p>
@@ -177,19 +177,19 @@ const RegisterPage = () => {
                 {/* Alternative Login Option */}
                 <div className="flex items-center relative justify-center">
                     <hr className="w-full" />
-                    <span className="text-Body-MD-Small absolute bg-Neutral px-4">یا</span>
+                    <span className="text-Regular-Normal-text-1 absolute bg-Neutral px-4">یا</span>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-y-2 my-6">
                     <button
                     onClick={() => signIn("google")}
-                    className="text-Greyscale-900 flex items-center justify-center gap-x-3 hover:text-primary-0 border border-Greyscale-100 rounded-full py-3 text-Body-MD-Small w-full hover:bg-primary-500"
+                    className="text-Greyscale-900 flex items-center justify-center gap-x-3 hover:text-primary-0 border border-Greyscale-100 rounded-full py-3 text-Regular-Normal-text-1 w-full hover:bg-primary-500"
                     >
                     <FcGoogle className="text-xl" /> ثبت‌نام با گوگل
                     </button>
                 </div>
 
                 {/* Terms and Conditions */}
-                <p className="text-Greyscale-700 text-Body-MD-Small text-center">
+                <p className="text-Greyscale-700 text-Regular-Normal-text-1 text-center">
                     با ادامه، شما با{" "}
                     <Link href="/terms" className="text-primary-500">
                     شرایط استفاده
@@ -210,11 +210,11 @@ const RegisterPage = () => {
                     alt="ثبت‌نام در رهنورد"
                 />
                 <div className="absolute m-8 text-primary-50">
-                    <p className="text-Heading-4 text-Neutral">
+                    <p className="text-Regular-Normal-title-3 text-Neutral">
                     «رهنورد همراه همیشگی شما در مسیر ماجراجویی، کمپینگ و کوهنوردی است. تجربه‌ای متفاوت و مطمئن در خرید تجهیزات.»
                     </p>
-                    <p className="text-Heading-5 mt-6 text-Neutral-300">
-                    تیم رهنورد <span className="text-Neutral">•</span> با شما در مسیر
+                    <p className="text-Regular-Normal-text-1 mt-6 text-Neutral-300">
+                    تیم رهنورد <span className="">•</span> با شما در مسیر
                     </p>
                 </div>
             </div>

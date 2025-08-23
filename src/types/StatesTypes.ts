@@ -19,3 +19,20 @@ export interface registerDataError_interface {
     password_error: string;          // Error message for the password field
     confirmPassword_error: string;   // Error message for the confirm password field
 }
+
+
+/**
+ * Interface representing login form data
+ */
+export interface loginData_interface {
+    email: string;               // User's email address
+    password: string;            // User's password
+}
+
+/**
+ * Interface representing validation errors for login form
+ */
+export interface loginDataError_interface {
+    email_error: string;         // Error message for the email field
+    password_error: string;      // Error message for the password field
+}

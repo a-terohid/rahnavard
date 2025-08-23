@@ -1,4 +1,6 @@
 import { 
+    loginData_interface,
+    loginDataError_interface,
     registerData_interface, 
     registerDataError_interface, 
 } from '@/types/StatesTypes';
@@ -70,3 +72,40 @@ export const RegisterFormsValidation = (
     return errors;
 };
 
+
+
+// Function to validate login form data and return an object containing error messages.
+export const LoginFormsValidation = (
+    data: loginData_interface , 
+    date_error: loginDataError_interface
+): loginDataError_interface => {
+
+    // Destructuring input fields
+    const { email, password } = data;
+
+    // Initializing an error object with previous errors
+    let errors: loginDataError_interface = {
+        email_error: date_error.email_error,
+        password_error: date_error.password_error,
+    };
+
+    // Email validation
+    if (!email) {
+        errors.email_error = ERROR.REQUIRED_FIELD;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        errors.email_error = ERROR.INVALID_DATA;
+    } else {
+        errors.email_error = "";
+    }
+
+    // Password validation
+    if (!password) {
+        errors.password_error = ERROR.REQUIRED_FIELD;
+    } else if (password.length < 6) {
+        errors.password_error = ERROR.PASSWORD_ATLEAST;
+    } else {
+        errors.password_error = "";
+    }
+
+    return errors;
+};
