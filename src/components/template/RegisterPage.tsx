@@ -90,7 +90,9 @@ const RegisterPage = () => {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Form Section */}
             <div className="container text-Greyscale-900 py-8 lg:ml-6">
-                <Logo className={"w-32"} />
+                <div className="flex justify-end">
+                    <Logo className={"w-32"} />
+                </div>
                 <div className="mb-8">
                     <h2 className="text-Bold-Normal-title-2 mt-6 mb-4">ایجاد حساب کاربری</h2>
                     <p className="text-Regular-Normal-text-1 text-gray-700">
