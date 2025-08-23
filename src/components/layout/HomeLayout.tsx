@@ -1,5 +1,7 @@
+"use client"
 
 import Navbar from "@/module/Navbar";
+import { usePathname } from "next/navigation";
 import { Toaster } from "react-hot-toast";
 
 /**
@@ -12,10 +14,21 @@ import { Toaster } from "react-hot-toast";
 
 const HomeLayout = ({ children }: { children: React.ReactNode; }) => {
 
+       // Get current route pathname
+    const pathname = usePathname();
+
+    // Define routes where layout components (Navbar, Footer) should be hidden
+    const hideLayout = [
+        "/login",
+        "/register",
+        "/forgot-password",
+        "/reset-password",
+        "/set-password"
+    ].includes(pathname);
 
     return (
         <body>
-            <Navbar />
+            {!hideLayout && <Navbar />}
             
             {/* Render main page content */}
             <div className={``}>{children}</div>
