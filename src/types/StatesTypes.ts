@@ -36,3 +36,34 @@ export interface loginDataError_interface {
     email_error: string;         // Error message for the email field
     password_error: string;      // Error message for the password field
 }
+
+
+/**
+ * Interface representing data for forgot password request
+ */
+export interface forgotPassword_interface {
+    email: string;               // Email address to send reset instructions
+}
+
+/**
+ * Interface representing validation errors for forgot password form
+ */
+export interface forgotPasswordError_interface {
+    email_error: string;         // Error message for the email field
+}
+
+/**
+ * Interface representing data for setting a new password
+ */
+export interface setPassword_interface {
+    password: string;            // New password
+    confirmPassword: string;     // Confirmation of the new password
+}
+
+/**
+ * Interface representing validation errors for setting password
+ */
+export interface setPasswordError_interface {
+    password_error: string;           // Error message for the password field
+    confirmPassword_error: string;    // Error message for the confirm password field
+}

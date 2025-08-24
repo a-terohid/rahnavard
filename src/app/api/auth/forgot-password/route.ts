@@ -48,7 +48,7 @@ export const POST = async (req: Request) => {
         const message = `Click here to reset your password: ${resetUrl} or you can use this code: ${resetToken}`;
 
         // Send the password reset email
-        await sendEmail(email, "Reset Password | Estatero", message);
+        await sendEmail(email, "Reset Password | Rahnavard", message);
 
         // Return a success response
         return NextResponse.json(

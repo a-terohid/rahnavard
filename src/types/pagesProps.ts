@@ -12,3 +12,11 @@ export interface inputComponent_input {
     error?: string;                // Optional error message for validation
     style?: string;                // Optional CSS class or style string
 }
+
+
+export interface resetpassword_props {
+    email: string;                 // User's email address
+    token: string;                 // Password reset token
+    error: string;                 // Error message, if any
+    expire: string;                // Expiration time for the reset token
+}

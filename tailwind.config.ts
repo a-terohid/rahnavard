@@ -22,6 +22,9 @@ const config = {
   darkMode: 'class',
   theme: {
     extend: {
+      backgroundImage: {
+        'ForgotPassword-texture': "url('/img/resetpasswordbaner.jpg')",
+      },
       colors: styleGuide_colors
     },
     fontFamily: {

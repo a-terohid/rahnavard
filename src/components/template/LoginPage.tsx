@@ -136,7 +136,7 @@ const LoginPage = () => {
         </div>
 
         {/* Remember Me and Forgot Password */}
-        <div className="text-Regular-Normal-text-1 flex items-center justify-between mt-3">
+        <div className="lg:text-Regular-Normal-text-1 text-Regular-Normal-text-2 flex items-center justify-between mt-3">
           <div className="flex items-center gap-x-2">
             <input
               className="w-4 h-4 appearance-none border rounded-md border-Neutral-400 checked:bg-primary-500 checked:border-primary-500 relative checked:after:content-['✔'] p-2 checked:after:absolute checked:after:text-white checked:after:font-bold checked:after:left-1/2 checked:after:top-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2"
