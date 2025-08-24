@@ -6,13 +6,16 @@ import { TbMenu2 } from "react-icons/tb";
 import { IoPerson } from "react-icons/io5";
 import { FaCartShopping } from "react-icons/fa6";
 import { LuSearch } from "react-icons/lu";
-import { RiCloseLargeFill } from "react-icons/ri";
+import { IoMdLogIn } from "react-icons/io";
 import { MdArrowDropDown, MdClose } from "react-icons/md";
 import { navItems } from '@/constants/NavbarItems';
+import { useSession } from 'next-auth/react';
 
 
 
 const Navbar = () => {
+
+    const { status } = useSession();
 
     const [ isOpen , setIsOpen ] = useState<boolean>(false)
     const [ isHover , setIsHover ] = useState<boolean>(false)
@@ -58,9 +61,14 @@ const Navbar = () => {
                         <li onMouseEnter={()=> setIsHover(false)}>
                             <Link href='/' className='hover:text-Secondary-600 text-2xl'><FaCartShopping/></Link>
                         </li>
-                        <li onMouseEnter={()=> setIsHover(false)}>
-                            <Link href='/' className='hover:text-Secondary-600 text-2xl'><IoPerson/></Link>
-                        </li>
+                        {
+                               status == "authenticated" ?
+                                <li onMouseEnter={()=> setIsHover(false)}>
+                                    <Link href='/dashboard' className='hover:text-Secondary-600 text-2xl'><IoPerson/></Link>
+                                </li> : <li onMouseEnter={()=> setIsHover(false)}>
+                                    <Link href='/login' className='hover:text-Secondary-600 text-2xl'><IoMdLogIn/></Link>
+                                </li> 
+                        }
                     </ul>
                 </div>
                 {

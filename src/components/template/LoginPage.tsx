@@ -115,7 +115,7 @@ const LoginPage = () => {
         <div className="flex flex-col gap-y-4">
           <INPUT
             label="ایمیل"
-            type="text"
+            type="email"
             name="email"
             value={email}
             placeholder="ایمیل خود را وارد کنید"
