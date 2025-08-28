@@ -1,3 +1,5 @@
+import { UserRole } from "./enums/generalEnums";
+
 /**
  * Interface for input component props
  */
@@ -19,4 +21,14 @@ export interface resetpassword_props {
     token: string;                 // Password reset token
     error: string;                 // Error message, if any
     expire: string;                // Expiration time for the reset token
+}
+
+
+/**
+ * Interface for dashboard layout properties
+ */
+export interface DashboardLoyout_prop {
+    children: React.ReactNode;     // Nested child components or elements
+    fullName: string;              // Full name of the current user
+    role: UserRole;                // Role of the current user
 }

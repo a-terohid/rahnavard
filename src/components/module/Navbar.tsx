@@ -11,12 +11,18 @@ import { MdArrowDropDown, MdClose } from "react-icons/md";
 import { navItems } from '@/constants/NavbarItems';
 import { useSession } from 'next-auth/react';
 import Logo from '@/elements/Logo';
+import { DashboardItems } from '@/constants/DashboardItems';
+import { DashboardItem_interface } from '@/types/generalTypes';
+import { UserRole } from '@/types/enums/generalEnums';
+import RenderDashboardNavbarItem from '@/elements/RenderDashboardNavbarItem';
 
 
 
 const Navbar = () => {
 
-    const { status } = useSession();
+    const { data:session , status } = useSession();
+
+    const role = session?.user.role   
 
     const [ isOpen , setIsOpen ] = useState<boolean>(false)
     const [ isHover , setIsHover ] = useState<boolean>(false)
@@ -131,6 +137,27 @@ const Navbar = () => {
                             </li>
                             
                         </ul>
+                        <div className='pt-4 border-t border-t-primary-50 lg:text-Body-MD-Small mt-5'>
+                            {
+                                    status == "authenticated"  ? <div>
+                                    <ul>
+                                    {
+
+                                        
+                                        DashboardItems.map( (item: DashboardItem_interface) => 
+                                            item.accessibility.includes(UserRole.ALL) || item.accessibility.includes(role as UserRole) ? 
+                                            <li key={item.href}>
+                                                {/* If the menu item has children, render using RenderDashboardMenuItem */}
+                                                        <RenderDashboardNavbarItem item={item} role={role} />  
+                                            </li> : null)  /* Only show items that the user has access to */
+                                    }
+                                    </ul>
+                                    </div> : <div className='items-center flex  justify-between'>
+                                        <Link href="/register" className='lg:py-3 py-2 lh:px-8 px-5 bg-Neutral rounded-full text-Greyscale-900'>Register</Link>
+                                        <Link href="/login" className='bg-Neutral lg:py-3 py-2 lg:px-8 px-5 rounded-full text-Greyscale-900'>Login</Link>
+                                    </div>
+                            }
+                        </div>
                     </div> : null
                 }
             </div> 

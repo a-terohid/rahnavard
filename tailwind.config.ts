@@ -13,7 +13,7 @@ const config = {
   safelist: [
     'bg-Success-100',
     'text-Success-300',
-    'bg-Sky-50',
+    'bg-primary-800',
     'text-Sky-200',
     'bg-Warning-50',
     'text-Warning-200',
