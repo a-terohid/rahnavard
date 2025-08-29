@@ -14,11 +14,6 @@ const DashboardLoyout = ({ children , role , fullName } : DashboardLoyout_prop) 
 
     if( role == "Owner" ) roletext = "مدیر"
     else if ( role == "Admin" ) roletext = "ادمین"
-
-    console.log("roletext: " , roletext);
-    console.log("role: " , role);
-    console.log(roleStyles[role]);
-    
     
     return (
         <div>
