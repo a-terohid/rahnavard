@@ -1,4 +1,6 @@
 import { 
+    editProfile_interface,
+    editProfileError_interface,
     forgotPassword_interface,
     forgotPasswordError_interface,
     loginData_interface,
@@ -176,6 +178,57 @@ export const SetPasswordFormsValidation = (
     } else {
         errors.confirmPassword_error = "";
     }
+
+    return errors;
+};
+
+
+
+
+// Function to validate edit profile form data and return an object containing error messages.
+export const editProfileFormsValidation = (
+    data: editProfile_interface, 
+    date_error: editProfileError_interface
+): editProfileError_interface => {
+
+    // Destructuring input fields
+    const { name, last_name , phone_number } = data;
+
+    // Initializing an error object with previous errors
+    let errors: editProfileError_interface = {
+        name_error: date_error.name_error,
+        last_name_error: date_error.last_name_error,
+        phone_number_error : date_error.phone_number_error
+    };
+
+      // Name validation
+      if (!name) {
+        errors.name_error = ERROR.REQUIRED_FIELD;
+    } else if (name.length < 3) {
+        errors.name_error = ERROR.NAME_ATLEAST;
+    } else {
+        errors.name_error = "";
+    }
+
+
+        //Last Name validation
+        if (!last_name) {
+            errors.last_name_error = ERROR.REQUIRED_FIELD;
+        } else if (last_name.length < 3) {
+            errors.last_name_error = ERROR.LASTNAME_ATLEAST;
+        } else {
+            errors.last_name_error = "";
+        }
+
+         //phone number validation
+         if (!phone_number) {
+            errors.phone_number_error = ERROR.REQUIRED_FIELD;
+        } else if (phone_number.length != 11) {
+            errors.phone_number_error = ERROR.PHONE_ATLEAST;
+        } else {
+            errors.phone_number_error = "";
+        }
+    
 
     return errors;
 };

@@ -32,3 +32,16 @@ export interface DashboardLoyout_prop {
     fullName: string;              // Full name of the current user
     role: UserRole;                // Role of the current user
 }
+
+/**
+ * Interface for image modal component props
+ */
+export interface ImageModalProps_interface {
+    show: boolean;                   // Whether the modal is visible
+    title?: string;                  // Optional modal title text
+    imagePriview?: string;           // URL of the preview image
+    image?: File | null;             // Original image file object
+    setImage?: (file: File | null) => void;       // Setter for image file
+    setImagePreview?: (previewUrl: string | null) => void; // Setter for preview URL
+    setShow?: (value: boolean) => void;           // Setter to show/hide modal
+}

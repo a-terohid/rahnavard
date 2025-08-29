@@ -34,7 +34,7 @@ const Navbar = () => {
     const ShowItemHandler = () => setShowItem( !ShowItem )
 
     return (
-        <div className="fixed w-full bg-primary-800 rounded-b-[20px]">
+        <div className="fixed w-full bg-primary-800 z-50 rounded-b-[20px]">
             <div className="container lg:py-8 py-5 text-Regular-Normal-text-1 text-primary-50">
                 <div className='flex items-center md:gap-x-4 lg:gap-x-0 '>
                     <span onClick={isOpenHandler} className='text-3xl lg:hidden ml-4'>{isOpen ? <MdClose /> : <TbMenu2/>}</span>

@@ -97,7 +97,7 @@ const DashboardProfilePage = ({ user }: { user: User_Interface }) => {
                         <p className='text-Bold-Normal-text-1'>
                             شماره تماس: 
                             {phone_number ? (
-                                <span className='text-Regular-Normal-text-1 ml-1'> {mask(phone_number , "(***) ***-****")}</span>
+                                <span dir='ltr' className='text-Regular-Normal-text-1 ml-1'> {mask(phone_number , "****-***-****")}</span>
                             ) : (
                                 <span className='text-Regular-Normal-text-1 italic text-Greyscale-400 ml-1'> این فیلد خالی است </span>
                             )}
