@@ -1,4 +1,5 @@
 import { UserRole } from "./enums/generalEnums";
+import { Blog_Interface } from "./modelTypes";
 
 /**
  * Interface for input component props
@@ -54,4 +55,17 @@ export interface resetDate_interface {
     userEmail: string;             // Email of the user requesting reset
     token: string;                 // Reset token string
     expire: string;                // Token expiration time
+}
+
+
+/**
+ * Interface for dashboard blogs page data
+ */
+export interface DashboardBlogsPage_interface {
+    blogs: Blog_Interface[];           // Array of blogs
+    authors: any;                     // Authors data (type unspecified)
+    currentPage: number;               // Current pagination page
+    totalPages: number;                // Total number of pages available
+    totalBlogs: number;                // Total number of blog entries
+    userIsAdmin?: boolean;             // Optional flag for admin user
 }

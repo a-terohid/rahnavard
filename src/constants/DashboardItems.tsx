@@ -72,21 +72,21 @@ export const DashboardItems : DashboardItem_interface[] = [
     //     icon : <BsFillHouseHeartFill />,
     //     children : []
     // },
-    // { 
-    //     name: "Blogs", 
-    //     href: "/dashboard/blogs" , 
-    //     accessibility: [UserRole.OWNER ,UserRole.AGENTOWNER , UserRole.AGENTADMIN , UserRole.ADMIN, UserRole.AGENT ],
-    //     icon : <LuBookCopy />,
-    //     children : [
-    //         { 
-    //             name: "Add blog", 
-    //             href: "/dashboard/blogs/add" , 
-    //             accessibility: [UserRole.OWNER ,UserRole.AGENTOWNER , UserRole.AGENTADMIN , UserRole.ADMIN, UserRole.AGENT ],
-    //             icon : <LuBookPlus />,
-    //             children : []
-    //         },
-    //     ]
-    // },
+    { 
+        name: "بلاگ ها", 
+        href: "/dashboard/blogs" , 
+        accessibility: [UserRole.OWNER , UserRole.ADMIN,  ],
+        icon : <LuBookCopy />,
+        children : [
+            { 
+                name: "افزودن بلاگ", 
+                href: "/dashboard/blogs/add" , 
+                accessibility: [UserRole.OWNER  , UserRole.ADMIN,  ],
+                icon : <LuBookPlus />,
+                children : []
+            },
+        ]
+    },
     // { 
     //     name: "All messages", 
     //     href: "/dashboard/all_messages" , 

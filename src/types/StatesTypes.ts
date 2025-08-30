@@ -1,3 +1,5 @@
+import { LogsActions } from "./enums/generalEnums";
+
 /**
  * Interface representing data for user registration
  */
@@ -85,4 +87,26 @@ export interface editProfileError_interface {
     name_error: string;              // Error message for the name field
     last_name_error: string;         // Error message for the last name field
     phone_number_error: string;      // Error message for the phone number field
+}
+
+
+/**
+ * Interface representing search parameters for blogs
+ */
+export interface BlogsSearchParams_interface {
+    page?: string;                 // Current page number (optional)
+    sort?: string;                 // Sort order (optional)
+    title?: string;                // Blog title filter (optional)
+    startDate?: string;            // Start date filter (optional)
+    endDate?: string;              // End date filter (optional)
+    published?: string;            // Published status filter (optional)
+    autor_id?: string;             // Author ID filter (optional)
+}
+
+/**
+ * Interface representing filters for logs data
+ */
+export interface LogsFilter_interfasce {
+    sort: 'sort' | 'esc' | "desc";      // Sorting order
+    action: LogsActions | "action" | "all";  // Action filter
 }

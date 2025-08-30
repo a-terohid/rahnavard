@@ -8,9 +8,9 @@
 	        animation: scale-up-ver-top 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-/* 
+
 .date-picker-input {
-        @apply appearance-none w-fit lg:text-Body-RL-Small px-3 py-2 pr-8 border border-Greyscale-100 rounded-lg focus:text-Greyscale-900 focus:border-Greyscale-900 focus:outline-none text-Body-RL-XSmall;
+        @apply appearance-none w-fit lg:text-Regular-Normal-text-2 px-3 py-2 pr-8 border border-neutral-100 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Regular-Caption-1;
         background-color: white;
       }
 
@@ -59,4 +59,4 @@
   .tiptap img {
     @apply w-1/2 mx-auto;
   }
-} */
+}
