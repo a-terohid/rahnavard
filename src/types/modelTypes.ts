@@ -47,3 +47,48 @@ export interface User_address_interface {
     createdAt: Date;             // Address creation date
     updatedAt?: Date;            // Last update date
 }
+
+
+/**
+ * Interface representing a blog post
+ */
+export interface Blog_Interface { 
+    _id?: string;                                       // Optional unique blog ID
+    title: string;                                     // Title of the blog
+    description: string;                               // Blog content in HTML or rich text
+    autor_id: string;                                  // ID of the author (user or agent)
+    thumbnails: string;                                // Thumbnail image URL
+    images: string[];                                  // Array of image URLs
+    published: boolean;                                // Whether blog is published
+    createdAt: Date;                                   // Date of creation
+    updatedAt?: Date;                                  // Optional update timestamp
+    PublishedBY: {                                     // Publisher details
+        userId: string;                                // Publisher user ID
+        email: string;                                 // Publisher email
+    };
+    testimonials: string[];                            // Array of testimonial IDs
+}
+
+/**
+ * Interface representing a testimonial left on a blog
+ */
+export interface Blog_Testimonials_interface {
+    _id?: string;              // Optional testimonial ID
+    user_id: string;           // ID of the user leaving the testimonial
+    blog_id: string;           // ID of the blog the testimonial is for
+    rate: number;              // Rating (e.g., 1-5)
+    replies: string[];         // Array of reply IDs
+    message: string;           // Testimonial content
+    createdAt: Date;           // Creation date
+    updatedAt?: Date;          // Optional last update
+}
+ 
+
+export interface Blog_Testimonials_reply_interface {
+    _id?: string;                  // Optional testimonial ID
+    parent_id: string;            // ID of the testimonial or reply being replied to
+    author_id: string;            // ID of the author of the reply
+    message: string;              // Text content of the reply
+    createdAt: Date;
+    updatedAt?: Date;
+}
