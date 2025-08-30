@@ -10,7 +10,7 @@
 
 
 .date-picker-input {
-        @apply appearance-none w-fit lg:text-Regular-Normal-text-2 px-3 py-2 pr-8 border border-neutral-100 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Regular-Caption-1;
+        @apply appearance-none w-fit lg:text-Regular-Normal-text-2 px-3 py-2 pl-8 border border-Neutral-400 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Regular-Normal-text-2 ;
         background-color: white;
       }
 

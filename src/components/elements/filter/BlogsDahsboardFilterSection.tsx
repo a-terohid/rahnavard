@@ -101,7 +101,7 @@ const BlogsDahsboardFilterSection = ({ PATH , authors }: { PATH: string  , autho
             name="sort"
             value={sort}
             onChange={changeHandler}
-            className="appearance-none w-fit text-Regular-Caption-1 lg:text-Regular-Normal-text-2 px-3 py-2 pl-8 border border-neutral-100 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Body-RL-XSmall"
+            className="appearance-none w-fit px-3 py-2 pl-8 border  border-Neutral-400 text-Regular-Normal-text-2 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none "
           >
             <option value="sort">ترتیب</option>
             <option value="desc">جدید</option>
@@ -129,7 +129,7 @@ const BlogsDahsboardFilterSection = ({ PATH , authors }: { PATH: string  , autho
                 name="published"
                 value={published}
                 onChange={changeHandler}
-                className="appearance-none w-fit text-Regular-Caption-1 lg:text-Regular-Normal-text-2 bg-primary-0 px-3 py-2 pl-8 border border-neutral-100 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Body-RL-XSmall"
+                className="appearance-none w-fit bg-primary-0 px-3 py-2 pl-8 border border-Neutral-400 text-Regular-Normal-text-2 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Body-RL-XSmall"
             >
                 <option value="published">پابلیش</option>
                 <option value="true">بله</option>
@@ -145,7 +145,7 @@ const BlogsDahsboardFilterSection = ({ PATH , authors }: { PATH: string  , autho
                 name="autor_id"
                 value={autor_id}
                 onChange={changeHandler}
-                className="appearance-none w-fit text-Regular-Caption-1 lg:text-Regular-Normal-text-2 bg-primary-0 px-3 py-2 pl-8 border border-neutral-100 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Body-RL-XSmall"
+                className="appearance-none w-fit bg-primary-0 px-3 py-2 pl-8 border border-Neutral-400 text-Regular-Normal-text-2 rounded-lg focus:text-neutral-900 focus:border-neutral-900 focus:outline-none text-Body-RL-XSmall"
             >
                 <option value="Autor">نویسنده</option>
                 {
