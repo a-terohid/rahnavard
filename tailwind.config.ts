@@ -24,6 +24,8 @@ const config = {
     extend: {
       backgroundImage: {
         'ForgotPassword-texture': "url('/img/resetpasswordbaner.jpg')",
+        'Blogs-texture': "url('/img/blogPageBanner.png')",
+
       },
       colors: styleGuide_colors
     },

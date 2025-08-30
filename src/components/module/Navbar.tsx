@@ -55,7 +55,7 @@ const Navbar = () => {
                             <Link href='/'className='hover:text-primary-400'>درباره ما</Link>
                         </li>
                         <li onMouseEnter={()=> setIsHover(false)}>
-                            <Link href='/' className='hover:text-primary-400'>بلاگ</Link>
+                            <Link href='/blogs' className='hover:text-primary-400'>بلاگ</Link>
                         </li>
                     </ul>
                     <ul className='text-primary-400 flex gap-x-4 flex-1 lg:flex-none  items-center md:w-full lg:w-fit '>
@@ -133,7 +133,7 @@ const Navbar = () => {
                                 <Link href='/'className='hover:text-Secondary-600'>درباره ما</Link>
                             </li>
                             <li >
-                                <Link href='/' className='hover:text-Secondary-600'>بلاگ</Link>
+                                <Link href='/blogs' className='hover:text-Secondary-600'>بلاگ</Link>
                             </li>
                             
                         </ul>
