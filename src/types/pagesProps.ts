@@ -45,3 +45,13 @@ export interface ImageModalProps_interface {
     setImagePreview?: (previewUrl: string | null) => void; // Setter for preview URL
     setShow?: (value: boolean) => void;           // Setter to show/hide modal
 }
+
+
+/**
+ * Interface for password reset date info
+ */
+export interface resetDate_interface {
+    userEmail: string;             // Email of the user requesting reset
+    token: string;                 // Reset token string
+    expire: string;                // Token expiration time
+}

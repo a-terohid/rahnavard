@@ -248,7 +248,7 @@ const EditProfileDashboardPage = ({ user }: { user: User_Interface }) => {
         ) : (
           <button
             onClick={handleEditProfile}
-            className="bg-primary-300 hover:bg-primary-600 text-primary-800 hover:text-primary-50 rounded-xl py-3 text-Body-MD-Small w-full "
+            className="bg-primary-300 hover:bg-primary-600 text-primary-800 hover:text-primary-50 rounded-xl py-3 text-Regular-Normal-text-2 w-full "
           >
             ذخیره تغییرات
           </button>
